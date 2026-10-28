@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Easy English · Học tiếng Anh cùng thầy Đạt</title>
+<meta name="description" content="Easy English: làm bài có điểm ngay, ôn từ vựng đúng lúc sắp quên, đăng story, thi đua cùng cả lớp. Học tiếng Anh mỗi ngày cùng thầy Phạm Văn Đạt.">
+<meta name="theme-color" content="#2f8fdd">
+<meta property="og:title" content="Easy English · Học tiếng Anh cùng thầy Đạt">
+<meta property="og:description" content="Mỗi ngày một chút, tiếng Anh tiến xa. Làm bài, ôn từ, thi đua cùng cả lớp.">
+<meta property="og:image" content="og.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --blue:#2f8fdd;--blue-d:#1f6fb5;--blue-s:#e3f1fc;--blue-xs:#f1f8fe;
+ --navy:#0e2a47;--ink:#16314d;--mute:#5b7089;--line:#dbe7f2;
+ --sun:#ffc93c;--sun-s:#fff3cf;--coral:#ff6b5e;--coral-s:#ffe4e0;--mint:#22b996;--mint-s:#d9f5ec;
+ --lav:#8b7cf6;--lav-s:#ece9ff;--pink:#ff7aa8;
+ --bg:#ffffff;--bg2:#f4f9fe;--card:#ffffff;--shadow:0 18px 40px -18px rgba(14,42,71,.28);
+ --r:22px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --blue:#4aa3ec;--blue-d:#7cc0f5;--blue-s:#173a5c;--blue-xs:#11283f;
+ --navy:#e8f2fb;--ink:#dce8f4;--mute:#94a9bf;--line:#244260;
+ --sun-s:#4a3c12;--coral-s:#4b2522;--mint-s:#123f35;--lav-s:#2c2856;
+ --bg:#0b1b2c;--bg2:#0f2337;--card:#132b44;--shadow:0 18px 40px -18px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+ --blue:#4aa3ec;--blue-d:#7cc0f5;--blue-s:#173a5c;--blue-xs:#11283f;
+ --navy:#e8f2fb;--ink:#dce8f4;--mute:#94a9bf;--line:#244260;
+ --sun-s:#4a3c12;--coral-s:#4b2522;--mint-s:#123f35;--lav-s:#2c2856;
+ --bg:#0b1b2c;--bg2:#0f2337;--card:#132b44;--shadow:0 18px 40px -18px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{color:var(--navy);margin:0;letter-spacing:-.02em;line-height:1.18}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;border:0;border-radius:999px;font:700 16px/1 inherit;font-family:inherit;padding:16px 26px;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 0 -4px var(--blue-d)}
+.btn-primary:hover{box-shadow:0 12px 0 -4px var(--blue-d)}
+.btn-sun{background:var(--sun);color:#3a2a00;box-shadow:0 10px 0 -4px #d9a312}
+.btn-line{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-line:hover{box-shadow:inset 0 0 0 2px var(--blue)}
+.btn svg{width:20px;height:20px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy);text-decoration:none;letter-spacing:-.02em}
+.brand .whale{width:44px;color:var(--blue)}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--mute);padding:8px 14px;border-radius:999px}
+.nav-links a:hover{color:var(--navy);background:var(--blue-xs)}
+.nav .btn{padding:12px 20px;font-size:15px}
+@media (max-width:860px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+
+/* whale */
+.whale{display:block;overflow:visible}
+.whale .w-body,.whale .w-tail{fill:currentColor}
+.whale .w-belly{fill:#0a1e32;opacity:.1}
+.whale .w-eye{fill:#0a1e32;opacity:.8}
+.whale .w-cheek{fill:#ff6f9a;opacity:.55}
+.whale .w-smile{stroke:#0a1e32;stroke-opacity:.8}
+
+/* hero */
+.hero{position:relative;background:var(--bg2);padding:56px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 8px;font-weight:600;font-size:14px;color:var(--ink)}
+.tag i{font-style:normal;background:var(--sun);color:#3a2a00;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px}
+.hero h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;margin:20px 0 18px}
+.hero h1 mark{background:none;color:var(--blue);position:relative;white-space:nowrap}
+.hero h1 mark svg{position:absolute;left:0;right:0;bottom:-.18em;width:100%;height:.32em;color:var(--sun)}
+.hero .lead{font-size:clamp(17px,1.6vw,19px);color:var(--mute);max-width:540px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 18px}
+.note{font-size:14px;color:var(--mute);display:flex;align-items:center;gap:8px}
+.note b{color:var(--ink)}
+.avs{display:flex}
+.avs span{width:30px;height:30px;border-radius:50%;border:2px solid var(--bg2);margin-left:-8px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff}
+.avs span:first-child{margin-left:0}
+
+.hero-art{position:relative;height:560px}
+.blob{position:absolute;border-radius:50%}
+.hero-art .b1{width:470px;height:470px;background:var(--blue-s);right:-20px;top:30px;border-radius:44% 56% 52% 48%/48% 42% 58% 52%}
+.hero-art .b2{width:110px;height:110px;background:var(--sun);right:30px;top:4px;opacity:.9}
+.laptop{position:absolute;left:0;top:70px;width:440px;z-index:2}
+.laptop .scr{background:var(--card);border:10px solid #1d2f45;border-bottom-width:14px;border-radius:18px 18px 6px 6px;height:280px;overflow:hidden;box-shadow:var(--shadow)}
+.laptop .base{height:14px;background:#2b4260;border-radius:0 0 16px 16px;margin:0 -26px;position:relative}
+.laptop .base::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:80px;height:6px;border-radius:0 0 8px 8px;background:#1d2f45}
+.phone{position:absolute;width:228px;height:462px;background:#1d2f45;border-radius:38px;padding:10px;box-shadow:var(--shadow);z-index:3}
+.phone .in{background:var(--card);border-radius:29px;height:100%;overflow:hidden;position:relative}
+.phone .in::before{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:70px;height:20px;border-radius:12px;background:#1d2f45;z-index:5}
+.hero-art .phone{right:20px;top:70px}
+.hero-art .whale-hero{position:absolute;left:-30px;bottom:30px;width:150px;color:var(--blue);z-index:4;animation:swim 6s ease-in-out infinite}
+@keyframes swim{50%{transform:translateY(-12px) rotate(-3deg)}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.chip{position:absolute;z-index:6;background:var(--card);border-radius:16px;padding:10px 14px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center;font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;animation:bob 5s ease-in-out infinite}
+.chip .ic{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-size:18px;flex:none}
+.chip small{display:block;color:var(--mute);font-weight:500;font-size:12px}
+.hero-art .c1{left:250px;top:8px;animation-delay:-1s}
+.hero-art .c2{left:-10px;top:378px;animation-delay:-2.5s}
+.hero-art .c3{right:-24px;bottom:-4px;animation-delay:-3.5s}
+.wave{display:block;width:100%;height:90px;margin-top:-10px;position:relative;z-index:1}
+.wave path{fill:var(--bg)}
+
+/* mini app UI used in mockups */
+.ui{font-size:11px;line-height:1.35;color:var(--ink)}
+.ui-top{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.ui-top .whale{width:24px;color:var(--blue)}
+.ui-top b{font-size:12px;color:var(--navy)}
+.ui-top .sp{margin-left:auto;display:flex;gap:6px}
+.ui-top .sp i{width:22px;height:22px;border-radius:50%;background:var(--blue-xs);display:block}
+.ui-body{display:grid;grid-template-columns:96px 1fr;height:calc(100% - 44px)}
+.ui-side{border-right:1px solid var(--line);padding:10px 8px;display:flex;flex-direction:column;gap:6px}
+.ui-side span{display:block;height:9px;border-radius:5px;background:var(--line)}
+.ui-side span.on{background:var(--blue);width:80%}
+.ui-main{padding:12px;display:flex;flex-direction:column;gap:9px}
+.ui-hi{font-weight:700;font-size:13px;color:var(--navy)}
+.ui-row{display:flex;align-items:center;gap:8px;background:var(--bg2);border-radius:10px;padding:8px 10px}
+.ui-row .dot{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;font-size:12px;flex:none}
+.ui-row b{font-weight:600}
+.ui-row em{margin-left:auto;font-style:normal;font-weight:700;font-size:10px;padding:3px 8px;border-radius:999px}
+.ok{background:var(--mint-s);color:#11806a}
+.new{background:var(--coral-s);color:#d4473b}
+.due{background:var(--sun-s);color:#9a6b00}
+.ui-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.ui-stats div{border-radius:10px;padding:8px;text-align:center;font-weight:600}
+.ui-stats b{display:block;font-size:16px;font-weight:800}
+
+.ph-head{padding:36px 14px 8px;display:flex;align-items:center;justify-content:space-between}
+.ph-head b{font-size:13px;color:var(--navy)}
+.ph-head span{font-size:11px;font-weight:700;background:var(--sun-s);color:#9a6b00;border-radius:999px;padding:3px 8px}
+.ph-stories{display:flex;gap:7px;padding:4px 12px 10px}
+.st{width:44px;height:64px;border-radius:10px;position:relative;flex:none;overflow:hidden;font-size:9px;color:#fff;font-weight:700;display:flex;align-items:flex-end;padding:4px}
+.st::before{content:"";position:absolute;top:4px;left:4px;width:16px;height:16px;border-radius:50%;border:2px solid var(--blue);background:#fff}
+.ring{position:relative;width:84px;height:84px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:9}
+.ring .tr{stroke:var(--blue-s)}
+.ring .pr{stroke:var(--mint);stroke-linecap:round}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:21px;font-weight:800;color:var(--navy)}
+.ring b small{font-size:10px;color:var(--mute);font-weight:600;display:block;margin-top:-6px}
+.ph-card{margin:0 12px 10px;border-radius:16px;padding:12px;background:var(--bg2);display:flex;gap:12px;align-items:center}
+.ph-card .t b{display:block;font-size:13px;color:var(--navy)}
+.ph-card .t small{color:var(--mute);font-size:10.5px}
+.stars{color:var(--sun);font-size:14px;letter-spacing:2px}
+.ph-row{margin:0 12px 8px;border-radius:12px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;font-size:11.5px;font-weight:600;border:1px solid var(--line)}
+.ph-row b{background:var(--blue);color:#fff;border-radius:999px;padding:4px 10px;font-size:10.5px}
+
+/* ribbon */
+.ribbon{padding:6px 0 30px}
+.ribbon .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rb{display:flex;gap:14px;align-items:center;padding:18px;border-radius:18px;background:var(--bg2)}
+.rb .ic{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;font-size:24px;flex:none}
+.rb b{display:block;color:var(--navy);font-size:15.5px}
+.rb span{font-size:13.5px;color:var(--mute)}
+@media (max-width:960px){.ribbon .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ribbon .wrap{grid-template-columns:1fr}}
+
+/* section heads */
+.sec{padding:90px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.kick{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--blue-xs);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.sec-head h2{font-size:clamp(30px,3.8vw,46px);font-weight:800}
+.sec-head p{color:var(--mute);font-size:18px;margin-top:14px}
+
+/* features */
+.feat{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center;padding:46px 0}
+.feat.rev .art{order:-1}
+.feat .num{font-weight:800;font-size:14px;color:var(--blue);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.feat .num::before{content:"";width:28px;height:3px;border-radius:3px;background:currentColor}
+.feat h3{font-size:clamp(26px,3vw,36px);font-weight:800;margin-bottom:14px}
+.feat .tx>p{font-size:17px;color:var(--mute)}
+.ticks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.ticks li::before{content:"";flex:none;width:24px;height:24px;border-radius:8px;margin-top:1px;background:var(--mint-s) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%2311806a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.art{position:relative;height:440px;border-radius:32px}
+.art .bg{position:absolute;inset:0;border-radius:32px;overflow:hidden}
+.art .bg i{position:absolute;border-radius:50%;display:block}
+.spark{position:absolute;width:26px;height:26px;color:var(--sun);z-index:5}
+@media (max-width:900px){.feat{grid-template-columns:1fr;gap:30px;padding:34px 0}.feat.rev .art{order:0}.art{height:400px}}
+
+/* card used in art */
+.card{position:absolute;background:var(--card);border-radius:20px;box-shadow:var(--shadow);z-index:2}
+
+/* F1 class feed */
+.a1 .bg{background:var(--blue-s)}
+.a1 .bg i:nth-child(1){width:180px;height:180px;background:var(--sun);opacity:.5;right:-50px;top:-50px}
+.a1 .bg i:nth-child(2){width:120px;height:120px;background:var(--mint);opacity:.25;left:-30px;bottom:-30px}
+.feed{left:7%;right:7%;top:38px;padding:18px}
+.feed-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.feed-h .cls{width:44px;height:44px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800}
+.feed-h b{display:block;color:var(--navy);font-size:16px}
+.feed-h small{color:var(--mute);font-size:13px}
+.topic{border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:10px}
+.topic-h{display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:10px}
+.prog{height:8px;border-radius:8px;background:var(--blue-s);overflow:hidden;width:110px}
+.prog i{display:block;height:100%;background:var(--mint);border-radius:8px}
+.items{display:grid;gap:7px}
+.it{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500}
+.it .ty{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:15px;flex:none}
+.it em{margin-left:auto;font-style:normal;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.a1 .chip{right:-14px;bottom:30px}
+
+/* F2 quiz + result */
+.a2 .bg{background:var(--mint-s)}
+.a2 .bg i:nth-child(1){width:220px;height:220px;background:var(--mint);opacity:.18;left:-60px;top:-60px}
+.a2 .bg i:nth-child(2){width:90px;height:90px;background:var(--sun);right:40px;bottom:30px;opacity:.6}
+.quiz{left:6%;top:36px;width:62%;padding:18px}
+.q-top{display:flex;justify-content:space-between;font-size:12.5px;font-weight:700;color:var(--mute);margin-bottom:10px}
+.q-top .tm{color:#d4473b;background:var(--coral-s);padding:3px 10px;border-radius:999px}
+.q-bar{height:7px;border-radius:7px;background:var(--line);margin-bottom:16px;overflow:hidden}
+.q-bar i{display:block;height:100%;width:62%;background:var(--blue);border-radius:7px}
+.q-text{font-weight:600;color:var(--navy);font-size:15px;margin-bottom:14px}
+.q-text u{text-decoration:none;border-bottom:2px dashed var(--blue);padding:0 18px}
+.opt{border:2px solid var(--line);border-radius:12px;padding:9px 12px;margin-bottom:8px;font-size:14px;font-weight:500;display:flex;gap:10px;align-items:center}
+.opt b{width:24px;height:24px;border-radius:8px;background:var(--bg2);display:grid;place-items:center;font-size:12px;flex:none}
+.opt.right{border-color:var(--mint);background:var(--mint-s)}
+.opt.right b{background:var(--mint);color:#fff}
+.res{right:5%;bottom:34px;width:46%;padding:18px;text-align:center}
+.res .ring{margin:0 auto 8px;width:100px;height:100px}
+.res .ring b{font-size:26px}
+.res h4{margin:0;color:var(--navy);font-size:16px}
+.res p{font-size:12.5px;color:var(--mute);margin-top:4px}
+.res .stars{font-size:20px;margin:4px 0}
+.confetti{position:absolute;z-index:4;width:10px;height:16px;border-radius:3px}
+
+/* F3 flashcards */
+.a3 .bg{background:var(--sun-s)}
+.a3 .bg i:nth-child(1){width:200px;height:200px;background:var(--sun);opacity:.45;right:-40px;bottom:-60px}
+.a3 .bg i:nth-child(2){width:80px;height:80px;background:var(--coral);opacity:.3;left:30px;top:30px}
+.fc{width:250px;height:170px;left:50%;top:60px;margin-left:-125px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+.fc.back1{transform:rotate(-8deg) translate(-26px,8px);background:var(--lav-s);box-shadow:none}
+.fc.back2{transform:rotate(6deg) translate(24px,4px);background:var(--coral-s);box-shadow:none}
+.fc .w{font-size:30px;font-weight:800;color:var(--navy)}
+.fc .ipa{color:var(--mute);font-size:14px;margin-top:2px}
+.fc .mean{margin-top:10px;font-weight:600;color:var(--blue);font-size:15px}
+.fc .spk{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:var(--blue-xs);display:grid;place-items:center;color:var(--blue)}
+.fc .spk svg{width:18px}
+.fc .lv{position:absolute;top:12px;left:14px;font-size:11px;font-weight:700;color:#9a6b00;background:var(--sun-s);padding:3px 9px;border-radius:999px}
+.srs{left:6%;right:6%;bottom:30px;padding:16px 18px}
+.srs-h{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px;color:var(--navy);margin-bottom:14px}
+.srs-h span{font-size:12px;color:#11806a;background:var(--mint-s);padding:3px 10px;border-radius:999px}
+.tl{display:flex;align-items:center;justify-content:space-between;position:relative}
+.tl::before{content:"";position:absolute;left:18px;right:18px;top:18px;height:4px;border-radius:4px;background:var(--line)}
+.tl::after{content:"";position:absolute;left:18px;width:42%;top:18px;height:4px;border-radius:4px;background:var(--mint)}
+.tl div{position:relative;z-index:1;text-align:center;font-size:11.5px;font-weight:600;color:var(--mute)}
+.tl b{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:3px solid var(--line);color:var(--navy);font-size:13px;margin:0 auto 4px}
+.tl .d b{background:var(--mint);border-color:var(--mint);color:#fff}
+.tl .n b{border-color:var(--sun);background:var(--sun-s)}
+.btns3{display:flex;gap:8px;justify-content:center;position:absolute;left:0;right:0;top:250px;z-index:3}
+.btns3 span{font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)}
+
+/* F4 stories */
+.a4 .bg{background:var(--lav-s)}
+.a4 .bg i:nth-child(1){width:240px;height:240px;background:var(--lav);opacity:.22;left:-70px;bottom:-80px}
+.a4 .bg i:nth-child(2){width:100px;height:100px;background:var(--pink);opacity:.35;right:30px;top:20px}
+.a4 .phone{left:50%;margin-left:-114px;top:-14px;transform:scale(.94);transform-origin:top center}
+.story{position:absolute;inset:0;background:#2f8fdd;color:#fff;display:flex;flex-direction:column;padding:34px 14px 14px}
+.story .bars{display:flex;gap:4px;margin-bottom:10px}
+.story .bars i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.4)}
+.story .bars i:first-child{background:#fff}
+.story .who{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700}
+.story .who span{width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center;color:#3a2a00;font-size:12px}
+.story .who small{font-weight:500;opacity:.8}
+.story .mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px}
+.story .big{width:120px;height:120px;border-radius:50%;background:#fff;color:#0e2a47;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:40px;font-weight:800;line-height:1}
+.story .big small{font-size:13px;color:#5b7089;font-weight:600;margin-top:4px}
+.story .cap{font-size:16px;font-weight:700}
+.story .sub{font-size:12px;opacity:.85}
+.story .reply{display:flex;align-items:center;gap:8px}
+.story .reply span{flex:1;border:1.5px solid rgba(255,255,255,.6);border-radius:999px;padding:8px 12px;font-size:11px;opacity:.9}
+.story .reply b{font-size:20px}
+.react{position:absolute;z-index:6;font-size:30px;animation:rise 4s ease-in infinite}
+@keyframes rise{0%{transform:translateY(0) scale(.8);opacity:0}15%{opacity:1}100%{transform:translateY(-140px) scale(1.15);opacity:0}}
+.a4 .c-left{left:-10px;top:70px}
+.a4 .c-right{right:-14px;bottom:60px;animation-delay:-2s}
+.mini-bar{position:absolute;z-index:6;left:-14px;bottom:24px;background:var(--card);border-radius:18px;padding:10px;display:flex;gap:8px;box-shadow:var(--shadow);animation:bob 6s ease-in-out infinite}
+.mini-bar .st{width:40px;height:58px}
+
+/* F5 leaderboard */
+.a5 .bg{background:var(--coral-s)}
+.a5 .bg i:nth-child(1){width:200px;height:200px;background:var(--coral);opacity:.2;right:-50px;top:-50px}
+.a5 .bg i:nth-child(2){width:110px;height:110px;background:var(--sun);opacity:.55;left:30px;bottom:20px}
+.podium{left:50%;bottom:40px;transform:translateX(-50%);display:flex;align-items:flex-end;gap:10px;background:transparent;box-shadow:none}
+.pd{width:104px;text-align:center}
+.pd .av{width:58px;height:58px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;font-weight:800;color:#fff;font-size:20px;position:relative;border:4px solid var(--card)}
+.pd .av .crown{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:24px}
+.pd .nm{font-weight:700;color:var(--navy);font-size:14px}
+.pd .pt{font-size:12px;color:var(--mute);font-weight:600;margin-bottom:8px}
+.pd .blk{border-radius:16px 16px 6px 6px;display:grid;place-items:start center;padding-top:10px;font-weight:800;font-size:30px;color:#fff}
+.honor{left:6%;top:32px;padding:14px 16px;width:58%;display:flex;gap:12px;align-items:center}
+.honor .md{width:52px;height:52px;border-radius:16px;background:var(--sun);display:grid;place-items:center;font-size:28px;flex:none}
+.honor b{display:block;color:var(--navy);font-size:14.5px}
+.honor small{color:var(--mute);font-size:12.5px}
+.bean{right:6%;top:32px;padding:12px 14px;text-align:center;width:120px}
+.bean svg{width:70px;height:70px;margin:0 auto}
+.bean b{display:block;font-size:13px;color:var(--navy)}
+.bean small{font-size:11.5px;color:#11806a;font-weight:700}
+
+/* F6 notifications */
+.a6 .bg{background:var(--blue-s)}
+.a6 .bg i:nth-child(1){width:260px;height:260px;background:var(--blue);opacity:.14;right:-80px;bottom:-80px}
+.a6 .bg i:nth-child(2){width:90px;height:90px;background:var(--sun);opacity:.6;left:40px;top:40px}
+.a6 .phone{left:50%;margin-left:-114px;top:-14px;transform:scale(.94);transform-origin:top center}
+.lock{position:absolute;inset:0;background:#163a5f;color:#fff;padding:52px 10px 10px;text-align:center}
+.lock .time{font-size:52px;font-weight:300;letter-spacing:-.02em;line-height:1}
+.lock .date{font-size:12px;opacity:.8;margin:4px 0 18px}
+.ntf{background:rgba(255,255,255,.93);color:#16314d;border-radius:16px;padding:9px 10px;text-align:left;display:flex;gap:9px;margin-bottom:8px}
+.ntf .ap{width:30px;height:30px;border-radius:8px;background:#2f8fdd;flex:none;display:grid;place-items:center}
+.ntf .ap svg{width:24px;color:#fff}
+.ntf b{display:flex;justify-content:space-between;font-size:11px}
+.ntf b small{font-weight:500;color:#6b7f95}
+.ntf p{font-size:11px;line-height:1.35;color:#2d4660}
+.bell{position:absolute;z-index:6;right:6%;top:40px;width:74px;height:74px;border-radius:24px;background:var(--sun);display:grid;place-items:center;font-size:36px;box-shadow:var(--shadow);animation:ring 3s ease-in-out infinite}
+@keyframes ring{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(-12deg)}20%,40%{transform:rotate(12deg)}}
+
+/* F7 profile */
+.a7 .bg{background:var(--mint-s)}
+.a7 .bg i:nth-child(1){width:220px;height:220px;background:var(--blue);opacity:.14;left:-60px;top:-60px}
+.a7 .bg i:nth-child(2){width:100px;height:100px;background:var(--pink);opacity:.35;right:30px;bottom:20px}
+.prof{left:8%;right:8%;top:36px;overflow:hidden}
+.prof .cover{height:110px;background:var(--blue);position:relative;overflow:hidden}
+.prof .cover i{position:absolute;border-radius:50%}
+.prof .cover i:nth-child(1){width:140px;height:140px;background:var(--sun);right:-30px;top:-50px;opacity:.85}
+.prof .cover i:nth-child(2){width:80px;height:80px;background:#fff;opacity:.15;left:40px;top:40px}
+.prof .cover .whale{position:absolute;width:80px;color:#fff;right:130px;top:16px;opacity:.9}
+.prof .me{display:flex;align-items:flex-start;gap:14px;padding:0 18px;margin-top:-42px;position:relative}
+.prof .pic{width:84px;height:84px;border-radius:50%;border:5px solid var(--card);background:var(--coral);display:grid;place-items:center;color:#fff;font-weight:800;font-size:30px;flex:none}
+.prof .nm{padding-top:52px}
+.prof .nm b{display:block;font-size:18px;color:var(--navy)}
+.prof .nm small{color:var(--mute);font-size:13px}
+.prof .bio{padding:10px 18px 0;font-size:13.5px;color:var(--ink)}
+.prof .ps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px 18px}
+.prof .ps div{background:var(--bg2);border-radius:12px;padding:8px 4px;text-align:center;font-size:11px;color:var(--mute);font-weight:600}
+.prof .ps b{display:block;font-size:17px;color:var(--navy)}
+.prof .hl{display:flex;gap:12px;padding:0 18px 18px}
+.prof .hl span{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--mute)}
+.prof .hl i{width:48px;height:48px;border-radius:50%;border:3px solid var(--blue);display:grid;place-items:center;font-style:normal;font-size:20px;background:var(--bg2)}
+
+/* teacher */
+.teacher{background:var(--bg2);position:relative;overflow:hidden}
+.t-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.t-photo{position:relative;height:520px}
+.t-photo .shape{position:absolute;inset:30px 20px 0 30px;background:var(--blue);border-radius:46% 54% 50% 50%/52% 46% 54% 48%}
+.t-photo .shape2{position:absolute;width:150px;height:150px;border-radius:50%;background:var(--sun);right:0;top:0}
+.t-photo .frame{position:absolute;left:60px;right:50px;top:50px;bottom:30px;border-radius:200px 200px 32px 32px;overflow:hidden;background:var(--blue-s);border:8px solid var(--card);box-shadow:var(--shadow);z-index:2}
+.t-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.t-photo .ini{width:100%;height:100%;display:grid;place-items:center;font-size:120px;font-weight:800;color:var(--blue)}
+.t-photo .whale{position:absolute;width:130px;color:var(--card);left:-10px;bottom:20px;z-index:3;animation:swim 6s ease-in-out infinite}
+.t-photo .chip{z-index:4}
+.t-photo .c1{right:-6px;top:110px}
+.t-photo .c2{left:0;top:40px;animation-delay:-2s}
+.t-name{font-size:clamp(32px,4vw,48px);font-weight:800}
+.t-head{font-size:18px;color:var(--blue);font-weight:700;margin:10px 0 18px}
+.t-bio{font-size:17px;color:var(--ink);white-space:pre-line}
+.quote{margin:24px 0;padding:20px 22px 20px 64px;border-radius:20px;background:var(--card);position:relative;font-size:17px;font-weight:600;font-style:italic;color:var(--navy)}
+.quote::before{content:"“";position:absolute;left:18px;top:4px;font-size:70px;line-height:1;color:var(--sun);font-style:normal;font-weight:800}
+.achs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:22px 0 26px}
+.ach{background:var(--card);border-radius:18px;padding:16px;border:1px solid var(--line)}
+.ach b{display:block;font-size:26px;font-weight:800;color:var(--blue);line-height:1.1}
+.ach span{font-size:14px;color:var(--mute);font-weight:500}
+.t-btns{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:900px){.t-grid{grid-template-columns:1fr;gap:20px}.t-photo{height:430px;max-width:440px;margin:0 auto;width:100%}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.step .pic{height:200px;position:relative;overflow:hidden}
+.step .pic i.o{position:absolute;border-radius:50%}
+.step .txt{padding:22px 24px 26px;position:relative}
+.step .n{position:absolute;top:-26px;left:24px;width:52px;height:52px;border-radius:16px;background:var(--navy);color:var(--bg);display:grid;place-items:center;font-weight:800;font-size:22px;border:5px solid var(--card)}
+:root[data-theme="dark"] .step .n{background:var(--blue);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .step .n{background:var(--blue);color:#fff}}
+.step h3{font-size:20px;margin:16px 0 8px}
+.step p{color:var(--mute);font-size:15px}
+.s1 .pic{background:var(--sun-s)}
+.s2 .pic{background:var(--blue-s)}
+.s3 .pic{background:var(--mint-s)}
+.acct{position:absolute;left:50%;top:34px;transform:translateX(-50%) rotate(-4deg);width:220px;background:var(--card);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.acct .hd{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;color:var(--navy);margin-bottom:12px}
+.acct .hd .whale{width:30px;color:var(--blue)}
+.acct .ln{font-size:11px;color:var(--mute);font-weight:600}
+.acct .vl{font-family:ui-monospace,Menlo,monospace;font-weight:700;color:var(--navy);background:var(--bg2);border-radius:8px;padding:5px 9px;margin:3px 0 8px;font-size:13px}
+.login{position:absolute;left:50%;top:26px;transform:translateX(-50%);width:230px;background:var(--card);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.login .whale{width:46px;color:var(--blue);margin:0 auto 6px}
+.login .f{height:30px;border-radius:9px;border:1.5px solid var(--line);margin-bottom:8px;display:flex;align-items:center;padding:0 10px;font-size:11.5px;color:var(--mute)}
+.login .f.on{border-color:var(--blue);color:var(--navy);font-weight:600}
+.login .go{height:32px;border-radius:9px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px}
+.home{position:absolute;left:50%;top:22px;transform:translateX(-50%);width:200px;height:240px;background:#1d2f45;border-radius:30px 30px 0 0;padding:8px 8px 0}
+.home .in{background:#2e7fc6;border-radius:23px 23px 0 0;height:100%;padding:30px 14px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px 8px;align-content:start}
+.home .ap{aspect-ratio:1;border-radius:11px;background:rgba(255,255,255,.28)}
+.home .ap.ee{background:#3b93db;display:grid;place-items:center;outline:3px solid var(--sun);outline-offset:2px;animation:bob 3s ease-in-out infinite}
+.home .ap.ee svg{width:84%;color:#fff}
+@media (max-width:900px){.steps{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+
+/* install row */
+.install{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ins{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:18px;background:var(--bg2)}
+.ins .ic{width:44px;height:44px;border-radius:14px;background:var(--card);display:grid;place-items:center;font-size:22px;flex:none}
+.ins b{display:block;color:var(--navy)}
+.ins span{font-size:14.5px;color:var(--mute)}
+@media (max-width:700px){.install{grid-template-columns:1fr}}
+
+/* faq */
+.faq{background:var(--bg2)}
+.qs{max-width:820px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--card);border-radius:18px;border:1px solid var(--line);padding:0 22px}
+summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:700;color:var(--navy);font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:10px;background:var(--blue-xs);color:var(--blue);display:grid;place-items:center;font-size:22px;font-weight:600;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 20px;color:var(--mute)}
+
+/* end */
+.end{padding:90px 0}
+.end-box{background:var(--blue);border-radius:36px;padding:56px;display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;position:relative;overflow:hidden;color:#fff}
+.end-box i{position:absolute;border-radius:50%;background:#fff;opacity:.08}
+.end-box i:nth-child(1){width:300px;height:300px;right:-80px;top:-120px}
+.end-box i:nth-child(2){width:160px;height:160px;left:30%;bottom:-90px}
+.end-box .whale{width:150px;color:#fff;position:relative;animation:swim 6s ease-in-out infinite}
+.end-box .whale .w-belly{opacity:.14}
+.end-box h2{color:#fff;font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.end-box p{opacity:.9;font-size:17px;margin-top:8px}
+.end-box .btn{position:relative}
+@media (max-width:860px){.end-box{grid-template-columns:1fr;text-align:center;padding:40px 24px;justify-items:center}.end-box .whale{width:110px}}
+footer{padding:30px 0 40px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--mute);font-size:14px;align-items:center}
+footer .brand{font-size:17px}
+footer .brand .whale{width:34px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+
+/* responsive hero */
+@media (max-width:1020px){
+ .hero .wrap{grid-template-columns:1fr}
+ .hero-txt{text-align:center}
+ .hero .lead{margin:0 auto}
+ .ctas,.note{justify-content:center}
+ .hero-art{height:520px;max-width:600px;width:100%;margin:0 auto}
+}
+@media (max-width:620px){
+ .hero{padding-top:34px}
+ .hero-art{height:430px}
+ .laptop{width:300px;top:60px;left:-6px}
+ .laptop .scr{height:190px;border-width:7px;border-bottom-width:10px}
+ .laptop .ui-side{display:none}.laptop .ui-body{grid-template-columns:1fr}
+ .laptop .ui-stats{display:none}
+ .hero-art .phone{right:-4px;top:40px;transform:scale(.78);transform-origin:top right}
+ .hero-art .b1{width:330px;height:330px;right:-40px}
+ .hero-art .whale-hero{width:100px;left:-6px;bottom:24px}
+ .hero-art .c1{left:auto;right:150px;top:4px}
+ .hero-art .c2{top:300px;left:0}
+ .hero-art .c3{display:none}
+ .sec{padding:64px 0}
+ .art{height:380px;border-radius:26px}
+ .feed{left:4%;right:4%;padding:14px}
+ .quiz{width:72%;left:4%}
+ .res{width:52%;right:3%}
+ .a4 .phone,.a6 .phone{transform:scale(.8)}
+ .mini-bar{display:none}
+ .honor{width:62%;left:4%}
+ .bean{right:4%;width:104px}
+ .pd{width:88px}
+ .prof{left:4%;right:4%}
+ .t-photo .frame{left:36px;right:30px}
+ .end-box .btn{width:100%}
+ .chip{font-size:12px;padding:8px 11px}
+ .note{flex-wrap:wrap;text-align:center}
+ .quiz{width:84%}.q-text{font-size:14px}
+ .res{width:50%;bottom:16px;padding:12px}.res .ring{width:78px;height:78px}.res .ring b{font-size:21px}.res h4{font-size:13.5px}.res p{font-size:11.5px}
+ .confetti{display:none}
+ .honor{top:16px;width:60%;padding:10px 12px;gap:10px}.honor .md{width:40px;height:40px;font-size:22px;border-radius:12px}.honor b{font-size:13px}.honor small{font-size:11.5px}
+ .bean{top:16px;width:92px;padding:8px}.bean svg{width:48px;height:48px}
+ .podium{bottom:18px}.pd .blk{font-size:24px}
+ .art.a7{height:460px}
+ .a5 .spark{display:none}
+ .prof .cover .whale{right:auto;left:52%;top:10px;width:64px}
+ .art.a3{height:410px}
+ .fc{top:34px;width:230px;height:156px;margin-left:-115px}.fc .w{font-size:26px}
+ .btns3{top:206px}.btns3 span{padding:7px 10px;font-size:12px}
+ .srs{bottom:14px;padding:12px 14px}.srs-h{margin-bottom:10px;font-size:13px}
+ .tl b{width:34px;height:34px}.tl::before,.tl::after{top:15px}
+ .chip .ic{width:28px;height:28px;font-size:15px}
+}
+@media (max-width:380px){.hero-art .c1{display:none}}
+</style>
+</head>
+<body class="no-js">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="whale" viewBox="-4 -14 72 60"><path d="M41 5.5V0M41 0c-1.6-3.6-5-5.2-8.6-4.4M41 0c1.6-3.6 5-5.2 8.6-4.4" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M16 26Q7 24 3 15q7 0 11 5-1-7 4-11 2 8 1 16z" fill="currentColor"/><path d="M14 27C14 14 26 6 40 6s22 9 22 21-10 15-24 15S14 37 14 27z" fill="currentColor"/><path d="M21 32c6 7 29 8 38 0-2 7-10 10-21 10-9 0-15-4-17-10z" fill="#0a1e32" opacity=".1"/><circle cx="43.5" cy="22" r="3.3" fill="#0a1e32" opacity=".8"/><circle cx="54.5" cy="22" r="3.3" fill="#0a1e32" opacity=".8"/><circle cx="44.6" cy="20.9" r="1.1" fill="#fff"/><circle cx="55.6" cy="20.9" r="1.1" fill="#fff"/><ellipse cx="40.3" cy="27.6" rx="2.8" ry="1.6" fill="#ff6f9a" opacity=".55"/><ellipse cx="57.9" cy="27.6" rx="2.6" ry="1.6" fill="#ff6f9a" opacity=".55"/><path d="M47 26.6q2 2.6 4 0" fill="none" stroke="#0a1e32" stroke-opacity=".8" stroke-width="1.3" stroke-linecap="round"/></symbol>
+ <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0c.8 6.4 4.6 10.6 12 12-7.4 1.4-11.2 5.6-12 12-.8-6.4-4.6-10.6-12-12C7.4 10.6 11.2 6.4 12 0z" fill="currentColor"/></symbol>
+ <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="nav" id="nav"><div class="wrap">
+ <a class="brand" href="#top"><svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg>Easy English</a>
+ <nav class="nav-links" aria-label="Mục lục"><a href="#tinh-nang">Tính năng</a><a href="#thay-dat">Thầy Đạt</a><a href="#bat-dau">Bắt đầu</a><a href="#hoi-dap">Hỏi đáp</a></nav>
+ <a class="btn btn-primary" data-app href="https://tienganhthaydat.id.vn/">Đăng nhập</a>
+</div></header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+ <div class="wrap">
+  <div class="hero-txt">
+   <span class="tag"><i>Miễn phí</i>Dành cho học trò của thầy Đạt</span>
+   <h1>Mỗi ngày một chút, tiếng Anh <mark>tiến xa<svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 14C50 4 150 2 197 10" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg></mark>.</h1>
+   <p class="lead">Làm bài là có điểm ngay, từ vựng tự quay lại đúng lúc bạn sắp quên, khoe thành tích lên story và thi đua cùng cả lớp. Tất cả trong một trang web, dùng được trên điện thoại.</p>
+   <div class="ctas">
+    <a class="btn btn-primary" data-app href="https://tienganhthaydat.id.vn/">Đăng nhập để học <svg viewBox="0 0 24 24"><use href="#arrow"/></svg></a>
+    <a class="btn btn-line" href="#tinh-nang">Xem có gì hay</a>
+   </div>
+   <p class="note"><span class="avs"><span style="background:#ff6b5e">L</span><span style="background:#22b996">M</span><span style="background:#8b7cf6">H</span><span style="background:#ffb020">A</span></span>Chưa có tài khoản? <b>Hỏi thầy Đạt nhé.</b></p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+   <div class="blob b1"></div><div class="blob b2"></div>
+   <div class="laptop"><div class="scr ui">
+    <div class="ui-top"><svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg><b>Easy English</b><div class="sp"><i></i><i></i></div></div>
+    <div class="ui-body"><div class="ui-side"><span class="on"></span><span></span><span style="width:70%"></span><span></span><span style="width:60%"></span></div>
+     <div class="ui-main"><div class="ui-hi">Chào buổi tối, Lan 👋</div>
+      <div class="ui-stats"><div style="background:var(--sun-s)"><b>🔥 12</b>ngày liền</div><div style="background:var(--mint-s)"><b>9,2</b>điểm TB</div><div style="background:var(--lav-s)"><b>340</b>từ đã học</div></div>
+      <div class="ui-row"><span class="dot" style="background:var(--blue-s)">📝</span><b>Unit 4 · Remembering the past</b><em class="new">Mới</em></div>
+      <div class="ui-row"><span class="dot" style="background:var(--mint-s)">🃏</span><b>Flashcards Unit 3</b><em class="ok">Xong</em></div>
+      <div class="ui-row"><span class="dot" style="background:var(--sun-s)">⏰</span><b>Đề luyện thi số 7</b><em class="due">Còn 2 ngày</em></div>
+     </div></div>
+   </div><div class="base"></div></div>
+   <div class="phone"><div class="in ui">
+    <div class="ph-head"><b>Hôm nay</b><span>🔥 12 ngày</span></div>
+    <div class="ph-stories">
+     <div class="st" style="background:#ff6b5e">Lan</div><div class="st" style="background:#22b996">Minh</div><div class="st" style="background:#8b7cf6">Huy</div><div class="st" style="background:#ffb020">An</div>
+    </div>
+    <div class="ph-card"><div class="ring" style="width:70px;height:70px"><svg viewBox="0 0 100 100"><circle class="tr" cx="50" cy="50" r="42"/><circle class="pr" cx="50" cy="50" r="42" stroke-dasharray="264" stroke-dashoffset="13"/></svg><b style="font-size:18px">9,5</b></div><div class="t"><b>Xuất sắc lắm! 🎉</b><small>Unit 3 · Cities of the future</small><div class="stars">★★★</div></div></div>
+    <div class="ph-row"><span>🔁 Ôn hôm nay · 12 từ</span><b>Ôn</b></div>
+    <div class="ph-row"><span>📸 Đăng story khoe điểm</span><b>Đăng</b></div>
+    <div class="ph-row"><span>🏅 Hạng 2 lớp 12A1</span><b>Xem</b></div>
+   </div></div>
+   <svg class="whale whale-hero" viewBox="-4 -14 72 60"><use href="#whale"/></svg>
+   <div class="chip c1"><span class="ic" style="background:var(--mint-s)">✅</span><div>Nộp bài thành công<small>Điểm: 9,5 / 10</small></div></div>
+   <div class="chip c2"><span class="ic" style="background:var(--coral-s)">❤️</span><div>Minh đã thả tim<small>story của bạn</small></div></div>
+   <div class="chip c3"><span class="ic" style="background:var(--sun-s)">🌱</span><div>+5 hạt đậu<small>vì học đều mỗi ngày</small></div></div>
+  </div>
+ </div>
+ <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50C120 20 240 20 360 45S600 80 720 55 960 15 1080 35 1320 75 1440 45V90H0Z"/></svg>
+</section>
+
+<section class="ribbon"><div class="wrap">
+ <div class="rb rv"><span class="ic" style="background:var(--sun-s)">🎁</span><div><b>Miễn phí hoàn toàn</b><span>Mọi tính năng cho học sinh</span></div></div>
+ <div class="rb rv"><span class="ic" style="background:var(--blue-s)">📱</span><div><b>Điện thoại & máy tính</b><span>Cài như một ứng dụng</span></div></div>
+ <div class="rb rv"><span class="ic" style="background:var(--mint-s)">⚡</span><div><b>Có điểm ngay</b><span>Biết sai ở đâu để sửa</span></div></div>
+ <div class="rb rv"><span class="ic" style="background:var(--coral-s)">⏱️</span><div><b>3 phút mỗi ngày</b><span>Đủ để nhớ từ thật lâu</span></div></div>
+</div></section>
+
+<!-- FEATURES -->
+<section class="sec" id="tinh-nang" style="padding-top:60px"><div class="wrap">
+ <div class="sec-head rv"><span class="kick">Có gì cho bạn</span><h2>Học tiếng Anh nhẹ nhàng hơn, vui hơn</h2><p>Mọi thứ bạn cần cho môn tiếng Anh ở trường, từ bài tập trên lớp đến luyện đề thi tốt nghiệp và HSA.</p></div>
+
+ <div class="feat rv">
+  <div class="tx"><div class="num">01 · Lớp học</div><h3>Lớp của bạn, gọn gàng như một bảng tin</h3><p>Mỗi chủ đề có đủ bài giảng, tài liệu, bài tập và flashcards. Thấy ngay bài nào mới, bài nào sắp hết hạn, bài nào đã xong.</p>
+   <ul class="ticks"><li>Bài mới hiện ngay ở trang chủ, không sót bài nào</li><li>Làm xong tự đánh dấu, thanh tiến độ đầy dần</li><li>Xem lại tài liệu, video bài giảng mọi lúc</li></ul></div>
+  <div class="art a1" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="card feed">
+    <div class="feed-h"><span class="cls">12</span><div><b>Lớp 12A1 · Tiếng Anh</b><small>Thầy Đạt · 38 học sinh</small></div></div>
+    <div class="topic"><div class="topic-h">Unit 4 · Remembering the past<span class="prog"><i style="width:66%"></i></span></div>
+     <div class="items">
+      <div class="it"><span class="ty" style="background:var(--lav-s)">🎬</span>Bài giảng: Past perfect<em class="ok">Đã xem</em></div>
+      <div class="it"><span class="ty" style="background:var(--mint-s)">🃏</span>Flashcards: 24 từ mới<em class="ok">Xong</em></div>
+      <div class="it"><span class="ty" style="background:var(--blue-s)">📝</span>Bài tập Reading<em class="due">Hạn 20:00</em></div>
+     </div></div>
+    <div class="topic" style="margin:0"><div class="topic-h">Luyện đề tốt nghiệp<span class="prog"><i style="width:30%"></i></span></div>
+     <div class="items"><div class="it"><span class="ty" style="background:var(--coral-s)">🎯</span>Đề số 8 · 50 câu · 60 phút<em class="new">Mới</em></div></div></div>
+   </div>
+   <div class="chip"><span class="ic" style="background:var(--blue-s)">📌</span><div>Thầy vừa giao bài mới<small>Unit 4 · Reading</small></div></div>
+  </div>
+ </div>
+
+ <div class="feat rev rv">
+  <div class="tx"><div class="num">02 · Làm bài</div><h3>Nộp bài là có điểm, kèm lời khen</h3><p>Điểm trên thang 10 hiện ngay khi nộp. Xem lại từng câu sai cùng đáp án đúng, biết phần nào cần ôn thêm.</p>
+   <ul class="ticks"><li>Trắc nghiệm, điền từ, đọc hiểu, nghe, viết</li><li>Đề thi có giờ, giống phòng thi thật</li><li>So với lần làm trước để thấy mình tiến bộ</li></ul></div>
+  <div class="art a2" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="card quiz">
+    <div class="q-top"><span>Câu 18 / 30</span><span class="tm">⏱ 12:45</span></div>
+    <div class="q-bar"><i></i></div>
+    <div class="q-text">By the time we arrived, the film <u></u> already.</div>
+    <div class="opt"><b>A</b>starts</div>
+    <div class="opt right"><b>B</b>had started</div>
+    <div class="opt"><b>C</b>has started</div>
+   </div>
+   <div class="card res">
+    <div class="ring"><svg viewBox="0 0 100 100"><circle class="tr" cx="50" cy="50" r="42"/><circle class="pr" cx="50" cy="50" r="42" stroke-dasharray="264" stroke-dashoffset="21"/></svg><b>9,2<small>/10</small></b></div>
+    <div class="stars">★★★</div><h4>Giỏi quá, Lan ơi! 🎉</h4><p>Cao hơn lần trước 1,4 điểm</p>
+   </div>
+   <span class="confetti" style="background:var(--coral);right:30%;bottom:230px;transform:rotate(20deg)"></span>
+   <span class="confetti" style="background:var(--sun);right:12%;bottom:250px;transform:rotate(-30deg)"></span>
+   <span class="confetti" style="background:var(--lav);right:46%;bottom:190px;transform:rotate(60deg)"></span>
+   <svg class="spark" viewBox="0 0 24 24" style="right:44%;top:28px"><use href="#spark"/></svg>
+  </div>
+ </div>
+
+ <div class="feat rv">
+  <div class="tx"><div class="num">03 · Từ vựng</div><h3>Từ vựng tự quay lại đúng lúc bạn sắp quên</h3><p>Học từ qua flashcards và trò chơi, nghe phát âm chuẩn. Mỗi từ được nhắc lại sau 1, 3, 7, 16 rồi 35 ngày, nên nhớ rất lâu.</p>
+   <ul class="ticks"><li>Bấm "Ôn hôm nay", chỉ khoảng 3 phút</li><li>Từ điển Anh – Việt tra ngay trong bài</li><li>Nhiều trò chơi: ghép từ, nghe chọn, gõ chính tả</li></ul></div>
+  <div class="art a3" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="card fc back1"></div><div class="card fc back2"></div>
+   <div class="card fc"><span class="lv">Lần ôn 3</span><span class="spk"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z" fill="currentColor"/></svg></span><div class="w">memorable</div><div class="ipa">/ˈmem.ər.ə.bəl/</div><div class="mean">đáng nhớ, khó quên</div></div>
+   <div class="btns3"><span style="color:#d4473b">😵 Quên</span><span style="color:#9a6b00">🤔 Hơi nhớ</span><span style="color:#11806a">😎 Nhớ rồi</span></div>
+   <div class="card srs">
+    <div class="srs-h">Lịch ôn của từ này<span>Đã nhớ 2/5 lần</span></div>
+    <div class="tl"><div class="d"><b>✓</b>1 ngày</div><div class="d"><b>✓</b>3 ngày</div><div class="n"><b>7</b>hôm nay</div><div><b>16</b>ngày</div><div><b>35</b>ngày</div></div>
+   </div>
+   <svg class="spark" viewBox="0 0 24 24" style="left:12%;top:40px;color:var(--coral)"><use href="#spark"/></svg>
+  </div>
+ </div>
+
+ <div class="feat rev rv">
+  <div class="tx"><div class="num">04 · Story & bạn bè</div><h3>Đăng story, thả tim cho bạn cùng trường</h3><p>Làm bài xong, chia sẻ điểm lên story chỉ với một chạm. Đăng ảnh góc học tập, lời nhắn cho cả lớp. Bạn bè thả cảm xúc, bạn nhận thông báo ngay.</p>
+   <ul class="ticks"><li>Story hiện 24 giờ cho học sinh toàn trường</li><li>Biết ai đã xem, ai đã thả tim</li><li>Ghim story yêu thích lên trang cá nhân</li></ul></div>
+  <div class="art a4" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="phone"><div class="in">
+    <div class="story"><div class="bars"><i></i><i></i><i></i></div>
+     <div class="who"><span>L</span><div>Ngọc Lan · 12A1<br><small>2 giờ trước</small></div></div>
+     <div class="mid"><div class="big">9,5<small>/10</small></div><div class="cap">Unit 3 xong rồi nè! 🎉</div><div class="sub">Cities of the future · ★★★</div></div>
+     <div class="reply"><span>Gửi lời động viên…</span><b>❤️</b><b>👏</b></div>
+    </div></div></div>
+   <span class="react" style="left:62%;bottom:90px">❤️</span><span class="react" style="left:68%;bottom:70px;animation-delay:-1.4s">👏</span><span class="react" style="left:58%;bottom:60px;animation-delay:-2.6s">😍</span>
+   <div class="chip c-left"><span class="ic" style="background:var(--coral-s)">❤️</span><div>Minh, Huy và 12 bạn<small>đã thả cảm xúc</small></div></div>
+   <div class="chip c-right"><span class="ic" style="background:var(--blue-s)">👀</span><div>48 lượt xem</div></div>
+  </div>
+ </div>
+
+ <div class="feat rv">
+  <div class="tx"><div class="num">05 · Thi đua</div><h3>Lên bảng xếp hạng, ghi tên bảng vàng</h3><p>Học đều mỗi ngày để giữ chuỗi và nhận hạt đậu, nuôi linh vật từ hạt mầm thành cây hoa. Đạt 9+, điểm 10 hay HSA cao là được thầy ghi tên lên bảng vàng.</p>
+   <ul class="ticks"><li>Bảng xếp hạng theo lớp và toàn trường</li><li>Huy hiệu cho những cột mốc đáng nhớ</li><li>Chuỗi ngày học để tạo thói quen tốt</li></ul></div>
+  <div class="art a5" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="card honor"><span class="md">🏅</span><div><b>Bảng vàng tháng 10</b><small>Lan · 10 điểm Unit 3</small></div></div>
+   <div class="card bean"><svg viewBox="0 0 80 80"><ellipse cx="40" cy="72" rx="22" ry="5" fill="#c58b4a" opacity=".35"/><path d="M40 70V38" stroke="#22b996" stroke-width="4" stroke-linecap="round"/><path d="M40 52c-12 0-18-8-18-16 10 0 18 6 18 16z" fill="#22b996"/><path d="M40 46c10 0 16-7 16-14-9 0-16 5-16 14z" fill="#3fd3ad"/><circle cx="40" cy="26" r="9" fill="#ff7aa8"/><circle cx="40" cy="26" r="4" fill="#ffc93c"/></svg><b>Cây hoa</b><small>🌱 248 đậu</small></div>
+   <div class="card podium">
+    <div class="pd"><div class="av" style="background:#8b7cf6">M</div><div class="nm">Minh</div><div class="pt">920 điểm</div><div class="blk" style="height:90px;background:#9fb3c8">2</div></div>
+    <div class="pd"><div class="av" style="background:#ff6b5e"><span class="crown">👑</span>L</div><div class="nm">Lan</div><div class="pt">985 điểm</div><div class="blk" style="height:126px;background:#ffb020">1</div></div>
+    <div class="pd"><div class="av" style="background:#22b996">H</div><div class="nm">Huy</div><div class="pt">870 điểm</div><div class="blk" style="height:66px;background:#e08a4f">3</div></div>
+   </div>
+   <svg class="spark" viewBox="0 0 24 24" style="left:46%;top:140px"><use href="#spark"/></svg>
+   <svg class="spark" viewBox="0 0 24 24" style="right:18%;top:180px;width:18px;height:18px;color:var(--coral)"><use href="#spark"/></svg>
+  </div>
+ </div>
+
+ <div class="feat rev rv">
+  <div class="tx"><div class="num">06 · Nhắc bài</div><h3>Điện thoại báo ngay, không lo quên bài</h3><p>Cài Easy English lên màn hình chính và bật thông báo. Có bài mới, sắp hết hạn nộp, vừa có điểm hay bạn bè thả tim, điện thoại sẽ báo cho bạn.</p>
+   <ul class="ticks"><li>Nhắc trước hạn nộp 1 ngày và 2 giờ</li><li>Báo điểm ngay khi thầy trả bài</li><li>Mở từ biểu tượng cá voi như một ứng dụng</li></ul></div>
+  <div class="art a6" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="phone"><div class="in"><div class="lock">
+    <div class="time">20:15</div><div class="date">Thứ Tư, 28 tháng 10</div>
+    <div class="ntf"><span class="ap"><svg viewBox="-4 -14 72 60"><use href="#whale"/></svg></span><div><b>Easy English<small>bây giờ</small></b><p>⏰ Còn 2 giờ để nộp “Unit 4 · Reading”</p></div></div>
+    <div class="ntf"><span class="ap"><svg viewBox="-4 -14 72 60"><use href="#whale"/></svg></span><div><b>Easy English<small>5 phút</small></b><p>🎯 Bài viết của bạn đã có điểm: 8,5</p></div></div>
+    <div class="ntf"><span class="ap"><svg viewBox="-4 -14 72 60"><use href="#whale"/></svg></span><div><b>Easy English<small>1 giờ</small></b><p>📌 Thầy Đạt vừa giao bài mới cho 12A1</p></div></div>
+    <div class="ntf"><span class="ap"><svg viewBox="-4 -14 72 60"><use href="#whale"/></svg></span><div><b>Easy English<small>2 giờ</small></b><p>❤️ Minh đã thả tim story của bạn</p></div></div>
+   </div></div></div>
+   <div class="bell">🔔</div>
+  </div>
+ </div>
+
+ <div class="feat rv">
+  <div class="tx"><div class="num">07 · Trang cá nhân</div><h3>Một góc riêng lưu lại hành trình của bạn</h3><p>Ảnh bìa, lời giới thiệu, số bài đã làm, điểm trung bình, huy hiệu và các story nổi bật. Ghé trang của bạn bè để cùng cổ vũ nhau.</p>
+   <ul class="ticks"><li>Tự chọn ảnh bìa và viết vài dòng về mình</li><li>Thành tích cập nhật sau mỗi bài làm</li><li>Story nổi bật được giữ lại mãi</li></ul></div>
+  <div class="art a7" aria-hidden="true"><div class="bg"><i></i><i></i></div>
+   <div class="card prof">
+    <div class="cover"><i></i><i></i><svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg></div>
+    <div class="me"><span class="pic">L</span><div class="nm"><b>Nguyễn Ngọc Lan</b><small>Lớp 12A1</small></div></div>
+    <div class="bio">Mục tiêu: 9+ tiếng Anh tốt nghiệp ✈️ Thích nghe nhạc US-UK.</div>
+    <div class="ps"><div><b>86</b>bài</div><div><b>9,2</b>điểm TB</div><div><b>🔥 12</b>ngày</div><div><b>7</b>huy hiệu</div></div>
+    <div class="hl"><span><i>🏆</i>Điểm 10</span><span><i>📚</i>Góc học</span><span><i>🎉</i>HSA</span><span><i>🌸</i>Cây hoa</span></div>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<!-- TEACHER -->
+<section class="sec teacher" id="thay-dat"><div class="wrap t-grid">
+ <div class="t-photo rv">
+  <div class="shape"></div><div class="shape2"></div>
+  <div class="frame" id="t-frame"><div class="ini" id="t-ini">Đ</div></div>
+  <svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg>
+  <div class="chip c1"><span class="ic" style="background:var(--sun-s)">👨‍🏫</span><div>Người tạo ra<small>Easy English</small></div></div>
+  <div class="chip c2"><span class="ic" style="background:var(--blue-s)">💬</span><div>Luôn đồng hành<small>cùng học trò</small></div></div>
+ </div>
+ <div class="rv">
+  <span class="kick">Thầy của bạn</span>
+  <h2 class="t-name" id="t-name">Thầy Phạm Văn Đạt</h2>
+  <div class="t-head" id="t-head">Giáo viên Tiếng Anh THPT</div>
+  <p class="t-bio" id="t-bio">Thầy làm ra Easy English để mỗi bạn học trò có thêm một góc học tiếng Anh mỗi ngày: làm bài có điểm ngay, ôn từ đúng lúc, và lúc nào cũng có thầy đồng hành.</p>
+  <div class="quote" id="t-quote">Không cần học thật nhiều trong một ngày, chỉ cần ngày nào cũng học một chút.</div>
+  <div class="achs" id="t-achs"></div>
+  <div class="t-btns">
+   <a class="btn btn-primary" data-app href="https://tienganhthaydat.id.vn/">Vào lớp của thầy <svg viewBox="0 0 24 24"><use href="#arrow"/></svg></a>
+   <a class="btn btn-line" id="t-fb" href="#" target="_blank" rel="noopener" hidden>Facebook của thầy</a>
+  </div>
+ </div>
+</div></section>
+
+<!-- STEPS -->
+<section class="sec" id="bat-dau"><div class="wrap">
+ <div class="sec-head rv"><span class="kick">Bắt đầu thế nào</span><h2>Ba bước là vào học được ngay</h2><p>Không cần tải ứng dụng từ kho. Mở trình duyệt là dùng được.</p></div>
+ <div class="steps">
+  <div class="step s1 rv"><div class="pic" aria-hidden="true"><i class="o" style="width:120px;height:120px;background:var(--sun);opacity:.4;right:-30px;top:-30px"></i>
+   <div class="acct"><div class="hd"><svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg>Tài khoản của bạn</div><div class="ln">Tên đăng nhập</div><div class="vl">lan.12a1</div><div class="ln">Mật khẩu</div><div class="vl">••••••••</div></div></div>
+   <div class="txt"><span class="n">1</span><h3>Nhận tài khoản</h3><p>Thầy Đạt cấp tên đăng nhập và mật khẩu cho từng bạn. Web không cho tự đăng ký để lớp học luôn an toàn.</p></div></div>
+  <div class="step s2 rv"><div class="pic" aria-hidden="true"><i class="o" style="width:110px;height:110px;background:var(--blue);opacity:.15;left:-30px;bottom:-30px"></i>
+   <div class="login"><svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg><div class="f on">lan.12a1</div><div class="f">••••••••</div><div class="go">Đăng nhập</div></div></div>
+   <div class="txt"><span class="n">2</span><h3>Đăng nhập</h3><p>Vào <b>tienganhthaydat.id.vn</b>, nhập tài khoản. Lần đầu vào, hãy đổi mật khẩu trong menu tài khoản.</p></div></div>
+  <div class="step s3 rv"><div class="pic" aria-hidden="true">
+   <div class="home"><div class="in"><span class="ap"></span><span class="ap"></span><span class="ap"></span><span class="ap"></span><span class="ap"></span><span class="ap ee"><svg viewBox="-4 -14 72 60"><use href="#whale"/></svg></span><span class="ap"></span><span class="ap"></span><span class="ap"></span><span class="ap"></span><span class="ap"></span><span class="ap"></span></div></div></div>
+   <div class="txt"><span class="n">3</span><h3>Cài lên điện thoại</h3><p>Thêm vào màn hình chính để mở nhanh bằng biểu tượng cá voi và nhận thông báo nhắc bài.</p></div></div>
+ </div>
+ <div class="install">
+  <div class="ins rv"><span class="ic">🍎</span><div><b>iPhone</b><span>Mở bằng Safari → bấm nút Chia sẻ → “Thêm vào MH chính” → Thêm.</span></div></div>
+  <div class="ins rv"><span class="ic">🤖</span><div><b>Android</b><span>Mở bằng Chrome → bấm ⋮ ở góc trên → “Thêm vào màn hình chính” hoặc “Cài đặt ứng dụng”.</span></div></div>
+ </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="sec faq" id="hoi-dap"><div class="wrap">
+ <div class="sec-head rv"><span class="kick">Hỏi đáp</span><h2>Bạn đang thắc mắc?</h2></div>
+ <div class="qs">
+  <details class="rv"><summary>Tài khoản lấy ở đâu?</summary><p>Thầy Đạt sẽ cấp tên đăng nhập và mật khẩu cho từng bạn trong lớp. Nếu chưa có, hãy nhắn thầy trên lớp hoặc qua Facebook.</p></details>
+  <details class="rv"><summary>Quên mật khẩu thì làm sao?</summary><p>Nhắn thầy để được đặt lại mật khẩu. Sau khi đăng nhập, bạn có thể tự đổi mật khẩu trong menu tài khoản.</p></details>
+  <details class="rv"><summary>Có mất phí không?</summary><p>Không. Học sinh dùng miễn phí tất cả tính năng.</p></details>
+  <details class="rv"><summary>Dùng trên máy nào được?</summary><p>Điện thoại, máy tính bảng, máy tính đều được. Nên cài lên màn hình chính điện thoại để mở nhanh và nhận thông báo nhắc bài.</p></details>
+  <details class="rv"><summary>Story của mình ai xem được?</summary><p>Story hiện trong 24 giờ cho học sinh trên Easy English. Bạn có thể xoá story bất cứ lúc nào, và thầy luôn theo dõi để giữ không gian lành mạnh.</p></details>
+  <details class="rv"><summary>Không thấy thông báo trên iPhone?</summary><p>iPhone chỉ nhận thông báo khi Easy English đã được thêm vào màn hình chính. Mở từ biểu tượng cá voi, vào Trang cá nhân và bật “Thông báo về điện thoại”.</p></details>
+ </div>
+</div></section>
+
+<section class="end"><div class="wrap"><div class="end-box rv"><i></i><i></i>
+ <svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg>
+ <div><h2>Sẵn sàng học chưa?</h2><p>Đăng nhập để vào lớp và làm bài đầu tiên ngay hôm nay.</p></div>
+ <a class="btn btn-sun" data-app href="https://tienganhthaydat.id.vn/">Đăng nhập <svg viewBox="0 0 24 24"><use href="#arrow"/></svg></a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+ <a class="brand" href="#top"><svg class="whale" viewBox="-4 -14 72 60"><use href="#whale"/></svg>Easy English</a>
+ <span>Học tiếng Anh mỗi ngày cùng thầy Đạt · © <span id="yr">2026</span></span>
+</div></footer>
+
+<script>
+(function(){
+ // Address of the app (sign-in). Change here if the app moves.
+ var APP_URL='https://tienganhthaydat.id.vn/';
+ document.querySelectorAll('[data-app]').forEach(function(a){a.href=APP_URL});
+ document.body.classList.remove('no-js');
+ try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
+
+ var nav=document.getElementById('nav');
+ function onScroll(){nav.classList.toggle('scrolled',window.scrollY>8)}
+ addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+ // reveal on scroll
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+ }else els.forEach(function(el){el.classList.add('in')});
+
+ // ---- Teacher info ----
+ // 1) Photo: a file named thay-dat.jpg next to this page wins.
+ // 2) Otherwise the profile set in the app ("Hồ sơ giáo viên") is read from Firebase.
+ var frame=document.getElementById('t-frame');
+ function setPhoto(src,isLocal){
+  var img=new Image();img.alt='Thầy Phạm Văn Đạt';img.decoding='async';
+  img.onload=function(){frame.innerHTML='';frame.appendChild(img)};
+  img.onerror=function(){if(isLocal)loadCloud(true)};
+  img.src=src;
+ }
+ var esc=function(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+ function apply(p,wantPhoto){
+  if(!p)return;
+  if(p.name){var n=p.name.trim();document.getElementById('t-name').textContent=/^(thầy|thay|mr|teacher)/i.test(n)?n:'Thầy '+n;document.getElementById('t-ini').textContent=n.split(/\s+/).pop().charAt(0).toUpperCase()}
+  if(p.headline)document.getElementById('t-head').textContent=p.headline;
+  if(p.bio)document.getElementById('t-bio').textContent=p.bio;
+  var ach=(p.achievements||[]).filter(function(a){return a&&(a.label||a.value)}).slice(0,4);
+  if(ach.length)document.getElementById('t-achs').innerHTML=ach.map(function(a){return '<div class="ach"><b>'+esc(a.value||'★')+'</b><span>'+esc(a.label)+'</span></div>'}).join('');
+  if(p.facebookUrl&&/^https?:\/\//i.test(p.facebookUrl)){var fb=document.getElementById('t-fb');fb.href=p.facebookUrl;fb.hidden=false}
+  if(wantPhoto&&p.avatarData&&/^data:image\//.test(p.avatarData))setPhoto(p.avatarData,false);
+ }
+ // Firestore REST value decoder
+ function dv(v){if(!v)return null;if('stringValue' in v)return v.stringValue;if('booleanValue' in v)return v.booleanValue;if('integerValue' in v)return Number(v.integerValue);if('doubleValue' in v)return v.doubleValue;if('nullValue' in v)return null;if(v.mapValue){var o={},f=v.mapValue.fields||{};for(var k in f)o[k]=dv(f[k]);return o}if(v.arrayValue)return (v.arrayValue.values||[]).map(dv);return null}
+ var KEY='AIzaSyCvDhVn9tc8VMx-finHZIxH6LG8HO9CaOo',PROJ='practice-test-portal';
+ var DOC='https://firestore.googleapis.com/v1/projects/'+PROJ+'/databases/(default)/documents/artifacts/language-in-use-app/public/data/app_settings/teacher_spotlight_v1031?key='+KEY;
+ var CK='ee_landing_teacher_v1';
+ function token(){
+  try{var t=JSON.parse(localStorage.getItem('ee_landing_tok')||'null');if(t&&t.exp>Date.now()+60000)return Promise.resolve(t.id)}catch(e){}
+  return fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='+KEY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({returnSecureToken:true})})
+   .then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.idToken)return null;try{localStorage.setItem('ee_landing_tok',JSON.stringify({id:j.idToken,exp:Date.now()+Number(j.expiresIn||3600)*1000}))}catch(e){}return j.idToken});
+ }
+ function getDoc(tok){return fetch(DOC,tok?{headers:{Authorization:'Bearer '+tok}}:{}).then(function(r){return r.ok?r.json():Promise.reject(r.status)})}
+ var loaded=false;
+ function loadCloud(wantPhoto){
+  if(loaded){return}loaded=true;
+  // cached copy first, so the section fills instantly on later visits
+  try{var c=JSON.parse(localStorage.getItem(CK)||'null');if(c)apply(c,wantPhoto)}catch(e){}
+  getDoc(null).catch(function(){return token().then(function(t){return t?getDoc(t):null})})
+   .then(function(j){if(!j||!j.fields)return;var d=dv({mapValue:{fields:j.fields}});var p=d.profile||d;if(p.enabled===false)return;apply(p,wantPhoto);try{localStorage.setItem(CK,JSON.stringify(p))}catch(e){}})
+   .catch(function(){});
+ }
+ // Try the local photo; text info always comes from the app profile.
+ var hasLocal=false;
+ var probe=new Image();
+ probe.onload=function(){hasLocal=true;setPhoto(probe.src,true);loaded=false;loadCloud(false)};
+ probe.onerror=function(){loadCloud(true)};
+ probe.src='thay-dat.jpg';
+})();
+</script>
+</body>
+</html>
